@@ -1,135 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Medi - Sito Ufficiale</title>
-
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background: black;
-            color: white;
-            padding: 25px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        .section {
-            padding: 30px;
-            margin: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-
-        .album-slide {
-            display: flex;
-            overflow-x: auto;
-            gap: 20px;
-            padding: 20px 0;
-        }
-
-        .album-box {
-            min-width: 250px;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.2);
-            padding: 15px;
-            text-align: center;
-        }
-
-        .album-cover {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .yt-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #00cc44;
-            color: white;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medi — Youngest Medi (Sito Ufficiale)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>Medi – Sito Ufficiale</header>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="https://images.pexels.com/photos/164959/pexels-photo-164959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300" alt="Medi logo" />
+        <h1>Youngest <span>Medi</span></h1>
+      </div>
 
-<!-- STORIA DELL'ARTISTA -->
-<div class="section">
-    <h2>Storia dell'artista</h2>
-    <p>
-        <b>Alberto Bernardini</b>, conosciuto artisticamente come <b>Medi</b>, scopre la sua passione per la musica
-        già alle scuole elementari, quando vince un concorso che gli fa capire quanto questo mondo lo affascini.
-        <br><br>
-        Da quel momento la musica diventa una parte fondamentale della sua vita.
-        Negli anni Medi sviluppa un suo stile personale, unendo voce e strumenti, creando canzoni sempre più curate.
-        <br><br>
-        In quattro anni pubblica più di <b>52 pezzi</b>, suddivisi in <b>tre album</b>, collaborando anche con gruppi
-        musicali come la <b>Roccia Gang</b>.  
-        <br><br>
-        Il suo brano più virale nasce tramite l’<b>intelligenza artificiale</b> in collaborazione con <b>Socialite</b>.
-        La sua musica continua a crescere e a raggiungere sempre più persone.
-    </p>
-</div>
+      <nav class="nav">
+        <a href="#storia">Storia</a>
+        <a href="#album">Album</a>
+        <a href="#video">Video</a>
+        <a class="btn-yt" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale YouTube</a>
+      </nav>
+    </div>
+  </header>
 
-<!-- SLIDE ALBUM/CANZONI -->
-<div class="section">
-    <h2>Album & Canzoni</h2>
-
-    <div class="album-slide">
-
-        <!-- ALBUM 1 -->
-        <div class="album-box">
-            <img class="album-cover" src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg" alt="Album 1">
-            <h3>Brano / Album 1</h3>
-            <p>Ascolta su YouTube</p>
-            <a class="yt-btn"
-               href="https://www.youtube.com/watch?v=wIte2GHBVvU&list=OLAK5uy_kt1_VGYPwLkyWixPdQ6awKR5bhSJwfcwo"
-               target="_blank">
-               ▶ Guarda su YouTube
-            </a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h2>Medi — Alberto Bernardini</h2>
+        <p>52 brani • 3 album • 4 anni di musica. Voce, strumenti e collaborazioni con Roccia Gang. Il pezzo più famoso realizzato con AI e Socialite.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#album">Ascolta gli album</a>
+          <a class="btn ghost" href="#storia">La sua storia</a>
         </div>
+      </div>
 
-        <!-- ALBUM 2 -->
-        <div class="album-box">
-            <img class="album-cover" src="https://images.pexels.com/photos/1647169/pexels-photo-1647169.jpeg" alt="Album 2">
-            <h3>Brano / Album 2</h3>
-            <p>Ascolta su YouTube</p>
-            <a class="yt-btn"
-               href="https://www.youtube.com/watch?v=pNeckY0ptas&list=OLAK5uy_nWp9SapJ0YrGGtJJjIpwJTkq3itXh9abM"
-               target="_blank">
-               ▶ Guarda su YouTube
-            </a>
+      <div class="hero-media">
+        <!-- embed primo video (se vuoi cambiare video sostituisci src) -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wIte2GHBVvU" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIA -->
+  <section id="storia" class="wrap section">
+    <div class="card">
+      <h2>Storia dell'artista</h2>
+      <p>
+        <strong>Alberto Bernardini</strong>, conosciuto artisticamente come <strong>Medi</strong>, scopre la sua passione per la musica già alle elementari,
+        quando vince un concorso scolastico. Da quel momento la musica diventa centrale nella sua vita.
+      </p>
+      <p>
+        Medi unisce voce e strumenti, sperimenta con produzioni moderne e collabora con collettivi come la <strong>Roccia Gang</strong>.
+        In quattro anni ha pubblicato <strong>52 pezzi</strong> distribuiti in <strong>tre album</strong>. Il suo brano più noto è nato con l'ausilio
+        dell'intelligenza artificiale in collaborazione con <strong>Socialite</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ALBUM / BRANI -->
+  <section id="album" class="wrap section">
+    <h2>Album & Brani</h2>
+
+    <div class="album-row">
+
+      <!-- BOX 1 -->
+      <article class="album">
+        <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600" alt="Copertina album 1">
+        <div class="album-info">
+          <h3>Brano / Playlist 1</h3>
+          <p>Ascolti: —</p>
+          <div class="album-actions">
+            <a class="btn" href="https://www.youtube.com/watch?v=wIte2GHBVvU&list=OLAK5uy_kt1_VGYPwLkyWixPdQ6awKR5bhSJwfcwo" target="_blank" rel="noopener">▶ Guarda su YouTube</a>
+            <a class="btn ghost" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale</a>
+          </div>
         </div>
+      </article>
+
+      <!-- BOX 2 -->
+      <article class="album">
+        <img src="https://images.pexels.com/photos/1647169/pexels-photo-1647169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600" alt="Copertina album 2">
+        <div class="album-info">
+          <h3>Brano / Playlist 2</h3>
+          <p>Ascolti: —</p>
+          <div class="album-actions">
+            <a class="btn" href="https://www.youtube.com/watch?v=pNeckY0ptas&list=OLAK5uy_nWp9SapJ0YrGGtJJjIpwJTkq3itXh9abM" target="_blank" rel="noopener">▶ Guarda su YouTube</a>
+            <a class="btn ghost" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale</a>
+          </div>
+        </div>
+      </article>
 
     </div>
-</div>
+  </section>
 
-<!-- PULSANTE GENERALE YOUTUBE -->
-<div class="section" style="text-align:center;">
-    <a class="yt-btn"
-       href="https://www.youtube.com/@youngest_medi"
-       target="_blank"
-       style="font-size:20px; padding:15px 25px;">
-        🌟 Visita il Canale di Medi
-    </a>
-</div>
+  <!-- SEZIONE VIDEO (altri video o playlist) -->
+  <section id="video" class="wrap section">
+    <h2>Video</h2>
+
+    <div class="videos-grid">
+      <!-- Embed del secondo video -->
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/pNeckY0ptas" title="YouTube video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Link al canale (grande) -->
+      <div class="video-cta">
+        <h3>Visita il canale di Medi</h3>
+        <p>Iscriviti per vedere tutti i video e le playlist.</p>
+        <a class="btn big" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Vai al Canale YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p><strong>Medi</strong> — Alberto Bernardini</p>
+        <p>© 2025</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">YouTube</a>
+        <!-- Se hai altri link (Spotify, Instagram) li aggiungo qui -->
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
