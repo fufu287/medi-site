@@ -3,23 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Medi — Sito Ufficiale</title>
+  <title>Youngest Medi — Sito Ufficiale</title>
 
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER con logo SVG inline -->
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap header-inner">
       <div class="brand">
-        <div class="logo-circle">M</div>
-        <div>
-          <h1>Youngest <span>Medi</span></h1>
-          <div class="sub">Alberto Bernardini — artista</div>
+        <!-- Logo SVG: moderno, gradient -->
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ff7a59"/>
+              <stop offset="1" stop-color="#ffb86b"/>
+            </linearGradient>
+          </defs>
+          <rect rx="18" width="100" height="100" fill="url(#g1)"></rect>
+          <text x="50" y="58" font-family="Inter, sans-serif" font-size="50" text-anchor="middle" fill="#fff" font-weight="700">M</text>
+        </svg>
+
+        <div class="brand-text">
+          <div class="artist">Youngest <strong>Medi</strong></div>
+          <div class="sub">Alberto Bernardini — Artista</div>
         </div>
       </div>
 
@@ -27,75 +38,93 @@
         <a href="#storia">Storia</a>
         <a href="#album">Album</a>
         <a href="#video">Video</a>
-        <a class="btn-yt" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale YouTube</a>
+        <a class="btn-yt" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">YouTube</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO (big banner) -->
   <section class="hero">
     <div class="wrap hero-inner">
-      <div class="hero-text">
-        <h2>Medi — Alberto Bernardini</h2>
-        <p class="lead">52 brani • 3 album • 4 anni di musica. Voce, strumenti e collaborazioni (Roccia Gang). Il pezzo più noto è nato con AI e Socialite.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#album">Ascolta gli album</a>
-          <a class="btn ghost" href="#storia">La sua storia</a>
+      <div class="hero-left">
+        <h1 class="hero-title">Youngest <span>Medi</span></h1>
+        <p class="hero-lead">52 brani • 3 album • 4 anni di musica. Voce, strumenti, produzioni moderne e collaborazioni.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#album">Ascolta gli album</a>
+          <a class="btn outline" href="#video">Guarda i video</a>
         </div>
       </div>
 
-      <div class="hero-media">
-        <!-- usa la foto che hai caricato (medi_photo.jpg) -->
-        <img src="medi_photo.jpg" alt="Medi" class="hero-photo" />
+      <div class="hero-right">
+        <!-- usa la foto caricata dall'utente -->
+        <div class="hero-photo-wrap">
+          <img src="medi_photo.jpg" alt="Medi" class="hero-photo" />
+          <div class="photo-frame"></div>
+        </div>
       </div>
     </div>
 
-    <!-- decorativo sotto-hero -->
-    <div class="pattern"></div>
+    <!-- pattern decorativo (tipo MulinoBianco soft) -->
+    <div class="hero-pattern" aria-hidden="true"></div>
   </section>
 
   <!-- STORIA -->
   <section id="storia" class="wrap section">
     <div class="card">
-      <h2>Storia dell'artista</h2>
-      <p>
-        <strong>Alberto Bernardini</strong>, conosciuto come <strong>Medi</strong>, scopre la sua passione per la musica già alle scuole elementari, quando vince un concorso.
-        Da allora si dedica alla musica: voce, strumenti, produzioni moderne e collaborazioni con collettivi come la <strong>Roccia Gang</strong>.
-      </p>
-      <p>
-        In quattro anni ha pubblicato <strong>52 brani</strong> raccolti in <strong>3 album</strong>. Il suo brano più famoso è stato realizzato con l'aiuto dell'intelligenza artificiale, in collaborazione con <strong>Socialite</strong>, ed è diventato virale sui social.
-      </p>
+      <h2>La storia di Medi</h2>
+      <p><strong>Alberto Bernardini</strong>, in arte <strong>Medi</strong>, scopre la musica alle elementari vincendo un concorso. Da allora si dedica alla scrittura, al canto e alla produzione, collaborando con collettivi come <strong>Roccia Gang</strong>.</p>
+      <p>In quattro anni Medi ha pubblicato <strong>52 brani</strong> in <strong>3 album</strong>. Il suo pezzo più noto è stato creato con AI in collaborazione con <strong>Socialite</strong> e ha ottenuto ampia visibilità sui social.</p>
     </div>
   </section>
 
-  <!-- ALBUM / BRANI -->
+  <!-- ALBUM / BRANI con thumbnail YouTube -->
   <section id="album" class="wrap section">
     <h2>Album & Brani</h2>
-
     <div class="album-row">
 
-      <!-- BOX 1 -->
       <article class="album">
         <img src="https://img.youtube.com/vi/wIte2GHBVvU/maxresdefault.jpg" alt="Copertina 1" onerror="this.src='https://img.youtube.com/vi/wIte2GHBVvU/hqdefault.jpg'">
         <div class="album-info">
           <h3>Brano / Playlist 1</h3>
           <p class="muted">Ascolti: —</p>
           <div class="album-actions">
-            <a class="btn" href="https://www.youtube.com/watch?v=wIte2GHBVvU&list=OLAK5uy_kt1_VGYPwLkyWixPdQ6awKR5bhSJwfcwo" target="_blank" rel="noopener">▶ Guarda su YouTube</a>
-            <a class="btn ghost" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale</a>
+            <a class="btn small" href="https://www.youtube.com/watch?v=wIte2GHBVvU&list=OLAK5uy_kt1_VGYPwLkyWixPdQ6awKR5bhSJwfcwo" target="_blank">Ascolta su YouTube</a>
+            <a class="btn outline small" href="https://www.youtube.com/@youngest_medi" target="_blank">Canale</a>
           </div>
         </div>
       </article>
 
-      <!-- BOX 2 -->
       <article class="album">
         <img src="https://img.youtube.com/vi/pNeckY0ptas/maxresdefault.jpg" alt="Copertina 2" onerror="this.src='https://img.youtube.com/vi/pNeckY0ptas/hqdefault.jpg'">
         <div class="album-info">
           <h3>Brano / Playlist 2</h3>
           <p class="muted">Ascolti: —</p>
           <div class="album-actions">
-            <a class="btn" href="https://www.youtube.com/watch?v=pNeckY0ptas&list=OLAK5uy_nWp9SapJ0YrGGtJJjIpwJTkq3itXh9abM" target="_blank" rel="noopener">▶ Guarda su YouTube</a>
-            <a class="btn ghost" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale</a>
+            <a class="btn small" href="https://www.youtube.com/watch?v=pNeckY0ptas&list=OLAK5uy_nWp9SapJ0YrGGtJJjIpwJTkq3itXh9abM" target="_blank">Ascolta su YouTube</a>
+            <a class="btn outline small" href="https://www.youtube.com/@youngest_medi" target="_blank">Canale</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- altri due video che mi hai dato -->
+      <article class="album">
+        <img src="https://img.youtube.com/vi/RVPegNHRwxQ/maxresdefault.jpg" alt="Copertina 3" onerror="this.src='https://img.youtube.com/vi/RVPegNHRwxQ/hqdefault.jpg'">
+        <div class="album-info">
+          <h3>Brano 3</h3>
+          <p class="muted">Ascolti: —</p>
+          <div class="album-actions">
+            <a class="btn small" href="https://youtu.be/RVPegNHRwxQ" target="_blank">Guarda su YouTube</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="album">
+        <img src="https://img.youtube.com/vi/P_oW1m91_i8/maxresdefault.jpg" alt="Copertina 4" onerror="this.src='https://img.youtube.com/vi/P_oW1m91_i8/hqdefault.jpg'">
+        <div class="album-info">
+          <h3>Brano 4</h3>
+          <p class="muted">Ascolti: —</p>
+          <div class="album-actions">
+            <a class="btn small" href="https://youtu.be/P_oW1m91_i8" target="_blank">Guarda su YouTube</a>
           </div>
         </div>
       </article>
@@ -103,50 +132,70 @@
     </div>
   </section>
 
-  <!-- VIDEO -->
+  <!-- VIDEO GRID completa (i 4 video principali + 2 embed precedenti) -->
   <section id="video" class="wrap section">
-    <h2>Video</h2>
+    <h2>Video & Brani recenti</h2>
 
     <div class="videos-grid">
-      <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/wIte2GHBVvU" title="YouTube video" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/wIte2GHBVvU" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Brano / Playlist 1</p>
       </div>
 
-      <div class="video-cta">
-        <h3>Visita il canale di Medi</h3>
-        <p>Iscriviti per seguire playlist e novità.</p>
-        <a class="btn big" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Vai al Canale YouTube</a>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/pNeckY0ptas" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Brano / Playlist 2</p>
       </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/RVPegNHRwxQ" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Brano 3</p>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/P_oW1m91_i8" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Brano 4</p>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/TMxrYOJ6-PE" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Brano 5</p>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/7wZovs5InbM" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Brano 6</p>
+      </div>
+    </div>
+
+    <div class="video-cta">
+      <a class="btn primary" href="https://www.youtube.com/@youngest_medi" target="_blank">Vai al canale</a>
     </div>
   </section>
 
-  <!-- GALLERY (mini) -->
+  <!-- GALLERY -->
   <section class="wrap section">
     <h2>Galleria</h2>
     <div class="gallery">
+      <img src="medi_photo.jpg" alt="Medi">
       <img src="https://img.youtube.com/vi/wIte2GHBVvU/hqdefault.jpg" alt="">
       <img src="https://img.youtube.com/vi/pNeckY0ptas/hqdefault.jpg" alt="">
-      <img src="medi_photo.jpg" alt="">
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div>
-        <p><strong>Medi</strong> — Alberto Bernardini</p>
-        <p>© 2025</p>
+    <div class="wrap">
+      <div class="footer-left">
+        <strong>Medi</strong> — Youngest Medi
+        <div class="muted">© 2025</div>
       </div>
-      <div class="socials">
-        <a href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">YouTube</a>
+      <div class="footer-right">
+        <a href="https://www.youtube.com/@youngest_medi" target="_blank">YouTube</a>
+        <!-- 
       </div>
     </div>
   </footer>
 
-  <!-- small script: ensures hero image is circular on large screens -->
-  <script>
-    // nothing heavy — solo progressive enhancement
-  </script>
 </body>
 </html>
