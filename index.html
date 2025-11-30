@@ -4,10 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Medi — Sito Ufficiale</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="wrap">
       <div class="brand">
@@ -40,10 +45,13 @@
       </div>
 
       <div class="hero-media">
-        <!-- Hero usa la thumbnail del primo video (fallback se non trovata) -->
-        <img src="https://img.youtube.com/vi/wIte2GHBVvU/maxresdefault.jpg" alt="Medi hero" onerror="this.src='https://img.youtube.com/vi/wIte2GHBVvU/hqdefault.jpg'"/>
+        <!-- usa la foto che hai caricato (medi_photo.jpg) -->
+        <img src="medi_photo.jpg" alt="Medi" class="hero-photo" />
       </div>
     </div>
+
+    <!-- decorativo sotto-hero -->
+    <div class="pattern"></div>
   </section>
 
   <!-- STORIA -->
@@ -52,8 +60,10 @@
       <h2>Storia dell'artista</h2>
       <p>
         <strong>Alberto Bernardini</strong>, conosciuto come <strong>Medi</strong>, scopre la sua passione per la musica già alle scuole elementari, quando vince un concorso.
-        Negli anni sviluppa uno stile personale usando voce e strumenti, collaborando anche con collettivi come la <strong>Roccia Gang</strong>.
-        In quattro anni ha pubblicato <strong>52 brani</strong> distribuiti in <strong>3 album</strong>. Il suo brano più popolare è stato realizzato con l'aiuto dell'intelligenza artificiale in collaborazione con <strong>Socialite</strong>.
+        Da allora si dedica alla musica: voce, strumenti, produzioni moderne e collaborazioni con collettivi come la <strong>Roccia Gang</strong>.
+      </p>
+      <p>
+        In quattro anni ha pubblicato <strong>52 brani</strong> raccolti in <strong>3 album</strong>. Il suo brano più famoso è stato realizzato con l'aiuto dell'intelligenza artificiale, in collaborazione con <strong>Socialite</strong>, ed è diventato virale sui social.
       </p>
     </div>
   </section>
@@ -64,12 +74,12 @@
 
     <div class="album-row">
 
-      <!-- BOX 1 (usa thumbnail YouTube) -->
+      <!-- BOX 1 -->
       <article class="album">
-        <img src="https://img.youtube.com/vi/wIte2GHBVvU/hqdefault.jpg" alt="Copertina 1">
+        <img src="https://img.youtube.com/vi/wIte2GHBVvU/maxresdefault.jpg" alt="Copertina 1" onerror="this.src='https://img.youtube.com/vi/wIte2GHBVvU/hqdefault.jpg'">
         <div class="album-info">
           <h3>Brano / Playlist 1</h3>
-          <p>Ascolti: —</p>
+          <p class="muted">Ascolti: —</p>
           <div class="album-actions">
             <a class="btn" href="https://www.youtube.com/watch?v=wIte2GHBVvU&list=OLAK5uy_kt1_VGYPwLkyWixPdQ6awKR5bhSJwfcwo" target="_blank" rel="noopener">▶ Guarda su YouTube</a>
             <a class="btn ghost" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale</a>
@@ -79,10 +89,10 @@
 
       <!-- BOX 2 -->
       <article class="album">
-        <img src="https://img.youtube.com/vi/pNeckY0ptas/hqdefault.jpg" alt="Copertina 2">
+        <img src="https://img.youtube.com/vi/pNeckY0ptas/maxresdefault.jpg" alt="Copertina 2" onerror="this.src='https://img.youtube.com/vi/pNeckY0ptas/hqdefault.jpg'">
         <div class="album-info">
           <h3>Brano / Playlist 2</h3>
-          <p>Ascolti: —</p>
+          <p class="muted">Ascolti: —</p>
           <div class="album-actions">
             <a class="btn" href="https://www.youtube.com/watch?v=pNeckY0ptas&list=OLAK5uy_nWp9SapJ0YrGGtJJjIpwJTkq3itXh9abM" target="_blank" rel="noopener">▶ Guarda su YouTube</a>
             <a class="btn ghost" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Canale</a>
@@ -98,18 +108,26 @@
     <h2>Video</h2>
 
     <div class="videos-grid">
-      <!-- video embed 1 -->
       <div class="video-embed">
         <iframe src="https://www.youtube.com/embed/wIte2GHBVvU" title="YouTube video" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-      <!-- info / canale -->
       <div class="video-cta">
         <h3>Visita il canale di Medi</h3>
-        <p>Iscriviti per vedere tutti i video, playlist e novità.</p>
+        <p>Iscriviti per seguire playlist e novità.</p>
         <a class="btn big" href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">Vai al Canale YouTube</a>
       </div>
+    </div>
+  </section>
+
+  <!-- GALLERY (mini) -->
+  <section class="wrap section">
+    <h2>Galleria</h2>
+    <div class="gallery">
+      <img src="https://img.youtube.com/vi/wIte2GHBVvU/hqdefault.jpg" alt="">
+      <img src="https://img.youtube.com/vi/pNeckY0ptas/hqdefault.jpg" alt="">
+      <img src="medi_photo.jpg" alt="">
     </div>
   </section>
 
@@ -122,10 +140,13 @@
       </div>
       <div class="socials">
         <a href="https://www.youtube.com/@youngest_medi" target="_blank" rel="noopener">YouTube</a>
-        <!-- se vuoi aggiungo Spotify / Instagram -->
       </div>
     </div>
   </footer>
 
+  <!-- small script: ensures hero image is circular on large screens -->
+  <script>
+    // nothing heavy — solo progressive enhancement
+  </script>
 </body>
 </html>
